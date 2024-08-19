@@ -1,0 +1,114 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-primary-dark;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 2.5rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        @include respond (laptop-l) {
+            letter-spacing: 1.2rem;
+            font-size: 5.5rem;
+        }
+
+        @include respond (laptop) {
+            letter-spacing: 1.2rem;
+            font-size: 5rem;
+        }
+
+        @include respond (tab) {
+            letter-spacing: 1.2rem;
+            font-size: 5rem;
+        }
+
+        @include respond (phone-l) {
+            letter-spacing: 1.2rem;
+            font-size: 4.5rem;
+        }
+
+        @include respond (phone-s) {
+            letter-spacing: .5rem;
+            font-size: 4.4rem;
+        }
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+
+        @include respond (laptop) {
+            letter-spacing: 1rem;
+        }
+
+        @include respond (phone-l) {
+            letter-spacing: .3rem;
+        }
+
+        @include respond (phone-s) {
+            letter-spacing: .3rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right,$color-primary-light ,$color-primary);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    @include respond (tab) {
+        font-size: 3rem;
+    }
+
+    @include respond (phone-l) {
+        font-size: 2.6rem;
+        max-width: 65% !important;
+    }
+
+    @include respond (phone-m) {
+        font-size: 2.6rem;
+        max-width: 70% !important;
+    }
+
+    @include respond (phone-s) {
+        font-size: 2.7rem;
+        max-width: 75% !important;
+    }
+}
+
+.heading-tertiary{
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
